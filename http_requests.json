@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "1c44f864-d961-4896-95b3-6af8d39eae4a",
+		"name": "Project_requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account requests",
+			"item": [
+				{
+					"name": "http://localhost:2524/api/account/addAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\nName: \"Victor\",\nPassword: \"Pass\",\nLocation: \"IASI\",\nTemperature: 28,\nSleepHour: 24,\nSleepMinute: 0\n}"
+						},
+						"url": {
+							"raw": "http://localhost:2524/api/account/addAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2524",
+							"path": [
+								"api",
+								"account",
+								"addAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2524/api/account/updateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\nName: \"Victor\",\nPassword: \"updatedpass\",\nLocation: \"IASI\",\nTemperature: 25,\nSleepHour: 24,\nSleepMinute: 0\n}"
+						},
+						"url": {
+							"raw": "http://localhost:2524/api/account/updateAccount?account=Victor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2524",
+							"path": [
+								"api",
+								"account",
+								"updateAccount"
+							],
+							"query": [
+								{
+									"key": "account",
+									"value": "Victor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2524/api/account/deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:2524/api/account/deleteAccount?account=Victor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2524",
+							"path": [
+								"api",
+								"account",
+								"deleteAccount"
+							],
+							"query": [
+								{
+									"key": "account",
+									"value": "Victor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2524/api/account/addSensor?account=Test&sensorId=1234STEMP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:2524/api/account/addSensor?account=Victor&sensorId=Temperature_sensor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2524",
+							"path": [
+								"api",
+								"account",
+								"addSensor"
+							],
+							"query": [
+								{
+									"key": "account",
+									"value": "Victor"
+								},
+								{
+									"key": "sensorId",
+									"value": "Temperature_sensor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2524/api/account/deleteSensor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:2524/api/account/deleteSensor?account=Victor&sensorId=Temperature_sensor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2524",
+							"path": [
+								"api",
+								"account",
+								"deleteSensor"
+							],
+							"query": [
+								{
+									"key": "account",
+									"value": "Victor"
+								},
+								{
+									"key": "sensorId",
+									"value": "Temperature_sensor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:2524/api/account/getSensorSettings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:2524/api/account/getSettings?sensorId=Temperature_sensor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2524",
+							"path": [
+								"api",
+								"account",
+								"getSettings"
+							],
+							"query": [
+								{
+									"key": "sensorId",
+									"value": "Temperature_sensor"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Command requests",
+			"item": [
+				{
+					"name": "http://localhost:5171/api/command/Temperature_Sensor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:5171/api/command/Temperature_Sensor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5171",
+							"path": [
+								"api",
+								"command",
+								"Temperature_Sensor"
+							]
+						},
+						"description": "Command management "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Weather requests",
+			"item": [
+				{
+					"name": "http://localhost:59880/api/weather/GetTemperature/Iasi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:59880/api/weather/GetTemperature/Iasi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "59880",
+							"path": [
+								"api",
+								"weather",
+								"GetTemperature",
+								"Iasi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

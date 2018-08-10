@@ -1,0 +1,11 @@
+[
+  {
+    "Location": "IASI",
+    "Name": "Victor",
+    "Password": "Pass",
+    "Sensors": [ "Temperature_sensor" ],
+    "SleepHour": 24,
+    "SleepMinute": 0,
+    "Temperature": 28
+  }
+]
