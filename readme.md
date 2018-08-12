@@ -10,3 +10,7 @@ In order to debug this project you need to install the following
 
 * RabbitMQ - version 3.6.5 or lower
 * erlang 
+
+### Http requests
+
+In order to send http requests I used Postman
