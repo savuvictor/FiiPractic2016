@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using WeatherService.Models;
 using WeatherService.DataManagement;
 using System.Net.Http.Headers;
 using System.Web;
@@ -30,7 +26,7 @@ namespace WeatherService.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
                 {
-                    var response = client.GetAsync("data/2.5/weather?q=" + cityname + ",uk&appid=24f455d3ac142f4690e1048203c03a5e").Result;
+                    var response = client.GetAsync("data/2.5/weather?q=" + cityname + ",uk&appid=API_KEY_HERE").Result;
 
                     if (response.IsSuccessStatusCode)
                     {

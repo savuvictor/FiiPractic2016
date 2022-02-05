@@ -1,6 +1,6 @@
 [
   {
-    "Location": "IASI",
+    "Location": "Iasi",
     "Name": "Victor",
     "Password": "Pass",
     "Sensors": [ "Temperature_sensor" ],
